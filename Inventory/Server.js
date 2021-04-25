@@ -74,7 +74,7 @@ app.post("/UpdateStock",(req,res)=>{
 			$set: {pstock: parseInt(s) + parseInt(req.body.stock)}},{sort: {_id: -1}},
 	(err,result)=>{
 		if(err) return res.send(err)
-		console.log(req.body.id+'stock updated')
+		console.log(req.body.id+' stock updated')
 		res.redirect('/')
 	})
 	})
@@ -88,7 +88,7 @@ app.post("/UpdatePrice",(req,res)=>{
 			$set: {sp: req.body.price}},{sort: {_id: -1}},
 	(err,result)=>{
 		if(err) return res.send(err)
-		console.log(req.body.iid+' stock updated')
+		console.log(req.body.id+' stock updated')
 		res.redirect('/')
 	})
 	})
